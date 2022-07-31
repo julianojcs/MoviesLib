@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Fj-iV-yfQ">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,49 +8,94 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Movies-->
+        <scene sceneID="77G-VM-sgD">
+            <objects>
+                <tableViewController id="OFu-oQ-grP" customClass="MoviesTableViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="idm-bq-WKy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="pVZ-dh-zFr" detailTextLabel="pjd-pH-nB4" style="IBUITableViewCellStyleValue1" id="a3k-qa-1Pq">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a3k-qa-1Pq" id="jIm-fA-Oj5">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pVZ-dh-zFr">
+                                            <rect key="frame" x="20" y="15" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pjd-pH-nB4">
+                                            <rect key="frame" x="361.33333333333331" y="15" width="32.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="CIM-Ds-CQx"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OFu-oQ-grP" id="Cv5-yI-gsf"/>
+                            <outlet property="delegate" destination="OFu-oQ-grP" id="XJf-fu-C7Z"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Movies" id="TrX-NP-vsa"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AC4-jx-gT2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toystory3" translatesAutoresizingMaskIntoConstraints="NO" id="Vwt-n4-Hhr">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="316"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="316" id="xCH-Pn-jSL"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="88" width="414" height="316"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toy Story 3" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jjH-8A-EaR">
-                                <rect key="frame" x="16" y="324" width="382" height="33.666666666666686"/>
+                                <rect key="frame" x="16" y="412" width="382" height="33.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Action | Drama | Children" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="987-WI-GKR">
-                                <rect key="frame" x="16" y="367.66666666666669" width="333" height="17"/>
+                                <rect key="frame" x="16" y="455.66666666666669" width="333" height="17"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="02:20" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcJ-1s-tBU">
-                                <rect key="frame" x="359" y="367.66666666666669" width="39" height="17"/>
+                                <rect key="frame" x="359" y="455.66666666666669" width="39" height="17"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8i-3C-Sw7">
-                                <rect key="frame" x="0.0" y="421.66666666666674" width="414" height="474.33333333333326"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8i-3C-Sw7">
+                                <rect key="frame" x="0.0" y="509.66666666666674" width="414" height="386.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synopsis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYe-Av-eBB">
-                                        <rect key="frame" x="16" y="16" width="382" height="17"/>
+                                        <rect key="frame" x="16" y="15.999999999999943" width="382" height="17"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="5ZA-MG-I1D">
-                                        <rect key="frame" x="16" y="41" width="382" height="383.33333333333331"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="5ZA-MG-I1D">
+                                        <rect key="frame" x="16" y="40.999999999999943" width="382" height="295.33333333333331"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Woody (Tom Hanks), a good-hearted cowboy doll who belongs to a young boy named Andy (John Morris), sees his position as Andy's favorite toy jeopardized when his parents buy him a Buzz Lightyear (Tim Allen) action figure. Even worse, the arrogant Buzz thinks he's a real spaceman on a mission to return to his home planet. When Andy's family moves to a new house, Woody and Buzz must escape the clutches of maladjusted neighbor Sid Phillips (Erik von Detten) and reunite with their boy.</string>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -70,10 +115,10 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="76m-yV-V7K">
-                                <rect key="frame" x="0.0" y="250" width="414" height="66"/>
+                                <rect key="frame" x="0.0" y="338" width="414" height="66"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7J-9N-T5r">
-                                <rect key="frame" x="168.66666666666666" y="124.66666666666669" width="77" height="67"/>
+                                <rect key="frame" x="168.66666666666666" y="212.66666666666666" width="77" height="66.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="b7J-9N-T5r" secondAttribute="height" multiplier="77:67" id="n2w-Wc-C8z"/>
                                 </constraints>
@@ -81,7 +126,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="play" title=""/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐️ 10.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Th-cW-gCN">
-                                <rect key="frame" x="16" y="394.66666666666669" width="382" height="17"/>
+                                <rect key="frame" x="16" y="482.66666666666669" width="382" height="17"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
@@ -109,18 +154,38 @@
                             <constraint firstItem="H8i-3C-Sw7" firstAttribute="top" secondItem="9Th-cW-gCN" secondAttribute="bottom" constant="10" id="iZr-fp-MaU"/>
                             <constraint firstItem="Vwt-n4-Hhr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jLT-Vt-hI4"/>
                             <constraint firstItem="H8i-3C-Sw7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pZu-er-2y0"/>
+                            <constraint firstItem="Vwt-n4-Hhr" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="r5L-tv-qXs"/>
                             <constraint firstItem="Vwt-n4-Hhr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r5f-e5-Zgy"/>
                             <constraint firstItem="76m-yV-V7K" firstAttribute="leading" secondItem="Vwt-n4-Hhr" secondAttribute="leading" id="sal-iK-TrN"/>
-                            <constraint firstItem="Vwt-n4-Hhr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uac-cM-5Cy"/>
+                            <constraint firstItem="Vwt-n4-Hhr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uac-cM-5Cy"/>
                             <constraint firstItem="bcJ-1s-tBU" firstAttribute="trailing" secondItem="jjH-8A-EaR" secondAttribute="trailing" id="uvv-4e-cqB"/>
                             <constraint firstItem="9Th-cW-gCN" firstAttribute="leading" secondItem="987-WI-GKR" secondAttribute="leading" id="xK7-N8-mfH"/>
                             <constraint firstItem="b7J-9N-T5r" firstAttribute="centerY" secondItem="Vwt-n4-Hhr" secondAttribute="centerY" id="zlD-dP-na7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="kU5-iy-xSl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124.6376811594203" y="85.714285714285708"/>
+            <point key="canvasLocation" x="1034.7826086956522" y="85.714285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="I8k-D7-Lm9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Fj-iV-yfQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="amm-gD-VGL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OFu-oQ-grP" kind="relationship" relationship="rootViewController" id="zZ7-GC-3oI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTY-g7-MaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-778.26086956521749" y="84.375"/>
         </scene>
     </scenes>
     <resources>
