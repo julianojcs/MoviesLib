@@ -44,10 +44,7 @@ class MoviesTableViewController: UITableViewController {
         }
         
         let movie = movies[indexPath.row]
-        cell.LabelTitle?.text = movie.title
-        cell.LabelRating?.text = "⭐️ \(movie.rating!)"
-        cell.LabelSummary?.text = movie.summary
-        cell.ImageViewPoater.image = UIImage(named: movie.imageSmall)
+        cell.configureWith(movie)
         
         return cell
     }

@@ -24,5 +24,12 @@ class MovieTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func configureWith (_ movie: Movie) {
+        LabelTitle?.text = movie.title
+        LabelRating?.text = "⭐️ \(movie.rating!)"
+        LabelSummary?.text = movie.summary
+        ImageViewPoater.image = UIImage(named: movie.imageSmall)
+    }
 
 }
