@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
         </scene>
-        <!--View Controller-->
+        <!--Movie View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MovieViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,6 +197,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="kU5-iy-xSl"/>
+                    <connections>
+                        <outlet property="imageViewPoster" destination="Vwt-n4-Hhr" id="zZL-Lh-4SL"/>
+                        <outlet property="labelCategory" destination="987-WI-GKR" id="3pJ-mh-LrY"/>
+                        <outlet property="labelDuration" destination="bcJ-1s-tBU" id="sb7-Oh-o5k"/>
+                        <outlet property="labelRating" destination="9Th-cW-gCN" id="998-CL-lLs"/>
+                        <outlet property="labelTitle" destination="jjH-8A-EaR" id="EUA-L9-DWr"/>
+                        <outlet property="textViewSummary" destination="5ZA-MG-I1D" id="AjG-04-M34"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
