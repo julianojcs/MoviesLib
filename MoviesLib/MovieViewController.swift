@@ -35,9 +35,11 @@ class MovieViewController: UIViewController {
     
     func prepareScreen() {
         if let movie = movie {
-            imageViewPoster.image = UIImage(named: movie.image!)
+            if let image = movie.image {
+                imageViewPoster.image = UIImage(data: image)
+            }
             labelTitle.text = movie.title
-            labelRating.text = "⭐️ \(movie.rating!)"
+            labelRating.text = "⭐️ \(movie.rating)"
             labelDuration.text = movie.duration
             labelCategory.text = movie.categories
             textViewSummary.text = movie.summary

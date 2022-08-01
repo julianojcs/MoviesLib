@@ -9,10 +9,10 @@ import UIKit
 
 class MovieTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var ImageViewPoater: UIImageView!
-    @IBOutlet weak var LabelTitle: UILabel!
-    @IBOutlet weak var LabelSummary: UILabel!
-    @IBOutlet weak var LabelRating: UILabel!
+    @IBOutlet weak var imageViewPoster: UIImageView!
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelSummary: UILabel!
+    @IBOutlet weak var labelRating: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,10 +26,12 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     func configureWith (_ movie: Movie) {
-        LabelTitle?.text = movie.title
-        LabelRating?.text = "⭐️ \(movie.rating!)"
-        LabelSummary?.text = movie.summary
-        ImageViewPoater.image = UIImage(named: movie.imageSmall)
+        labelTitle?.text = movie.title
+        labelRating?.text = "⭐️ \(movie.rating)"
+        labelSummary?.text = movie.summary
+        if let image = movie.image {
+            imageViewPoster.image = UIImage(data: image)
+        }
     }
 
 }

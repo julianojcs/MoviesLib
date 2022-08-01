@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import CoreData
 
 class MoviesTableViewController: UITableViewController {
-    var movies: [Movie] = []
+    var fetchedResultsController: NSFetchedResultsController<Movie>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,21 +18,20 @@ class MoviesTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let movieViewController = segue.destination as? MovieViewController,
-           let row = tableView.indexPathForSelectedRow?.row {
-            movieViewController.movie = movies[row]
+           let indexPath = tableView.indexPathForSelectedRow {
+            movieViewController.movie = fetchedResultsController.object(at: indexPath)
         }
     }
     
     func loadMovies() {
-        guard let url = Bundle.main.url(forResource: "movies", withExtension: "json") else {
-            return
-        }
-        do {
-            let data = try Data(contentsOf: url)
-            movies = try JSONDecoder().decode([Movie].self, from: data)
-        } catch {
-            print(error)
-        }
+        let fetchRequest: NSFetchRequest<Movie> = Movie.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "title", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        fetchedResultsController.delegate = self
+        try? fetchedResultsController.performFetch()
     }
 
     // MARK: - Table view data source
@@ -41,16 +41,15 @@ class MoviesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+        return fetchedResultsController.fetchedObjects?.count ?? 0
     }
-
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MovieTableViewCell else {
             return UITableViewCell()
         }
         
-        let movie = movies[indexPath.row]
+        let movie = fetchedResultsController.object(at: indexPath)
         cell.configureWith(movie)
         
         return cell
@@ -102,4 +101,10 @@ class MoviesTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension MoviesTableViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        tableView.reloadData()
+    }
 }

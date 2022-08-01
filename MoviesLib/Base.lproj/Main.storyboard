@@ -71,7 +71,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="ImageViewPoater" destination="o7t-20-ZM2" id="p7J-Ns-Pvg"/>
+                                    <outlet property="ImageViewPoster" destination="o7t-20-ZM2" id="p7J-Ns-Pvg"/>
                                     <outlet property="LabelRating" destination="FCt-sB-76V" id="V9T-Xj-bIg"/>
                                     <outlet property="LabelSummary" destination="M4I-Bu-LGo" id="Lz5-a7-gQI"/>
                                     <outlet property="LabelTitle" destination="TtG-dW-rYX" id="can-vL-D76"/>
@@ -202,7 +202,7 @@
                     <connections>
                         <outlet property="buttonAddEdit" destination="MJC-VV-WVY" id="LwL-LR-jkZ"/>
                         <outlet property="imageViewPoster" destination="CNJ-Wm-c7U" id="KS7-R0-u6u"/>
-                        <outlet property="textFieldCategory" destination="K62-Ea-qAd" id="fxK-kD-9eI"/>
+                        <outlet property="textFieldCategories" destination="K62-Ea-qAd" id="fxK-kD-9eI"/>
                         <outlet property="textFieldDuration" destination="MZv-58-XRa" id="WQS-x3-zFM"/>
                         <outlet property="textFieldRating" destination="qVa-Vq-Kt4" id="vF2-7m-wwF"/>
                         <outlet property="textFieldTitle" destination="6W1-vq-57P" id="JWs-tO-TnQ"/>
