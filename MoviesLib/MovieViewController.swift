@@ -27,6 +27,12 @@ class MovieViewController: UIViewController {
         prepareScreen()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let movieFormViewController = segue.destination as? MovieFormViewController {
+            movieFormViewController.movie = movie
+        }
+    }
+    
     func prepareScreen() {
         if let movie = movie {
             imageViewPoster.image = UIImage(named: movie.image!)

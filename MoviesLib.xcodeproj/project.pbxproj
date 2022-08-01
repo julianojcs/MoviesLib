@@ -17,6 +17,7 @@
 		3AA2AD8D2896CE4000AA4B7B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA2AD8C2896CE4000AA4B7B /* Movie.swift */; };
 		3AA2AD8F2896E36F00AA4B7B /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA2AD8E2896E36F00AA4B7B /* MoviesTableViewController.swift */; };
 		3AA2AD912897594600AA4B7B /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA2AD902897594600AA4B7B /* MovieTableViewCell.swift */; };
+		3AA2AD93289834FA00AA4B7B /* MovieFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA2AD92289834FA00AA4B7B /* MovieFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3AA2AD8C2896CE4000AA4B7B /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		3AA2AD8E2896E36F00AA4B7B /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		3AA2AD902897594600AA4B7B /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		3AA2AD92289834FA00AA4B7B /* MovieFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				3AA2AD8C2896CE4000AA4B7B /* Movie.swift */,
 				3AA2AD8E2896E36F00AA4B7B /* MoviesTableViewController.swift */,
 				3AA2AD902897594600AA4B7B /* MovieTableViewCell.swift */,
+				3AA2AD92289834FA00AA4B7B /* MovieFormViewController.swift */,
 				3A7FA46E28924A46000F8DBB /* Main.storyboard */,
 				3A7FA47128924A4E000F8DBB /* Assets.xcassets */,
 				3A7FA47328924A4E000F8DBB /* LaunchScreen.storyboard */,
@@ -163,6 +166,7 @@
 				3A7FA46928924A46000F8DBB /* AppDelegate.swift in Sources */,
 				3AA2AD912897594600AA4B7B /* MovieTableViewCell.swift in Sources */,
 				3AA2AD8D2896CE4000AA4B7B /* Movie.swift in Sources */,
+				3AA2AD93289834FA00AA4B7B /* MovieFormViewController.swift in Sources */,
 				3AA2AD8F2896E36F00AA4B7B /* MoviesTableViewController.swift in Sources */,
 				3A7FA46B28924A46000F8DBB /* SceneDelegate.swift in Sources */,
 			);
