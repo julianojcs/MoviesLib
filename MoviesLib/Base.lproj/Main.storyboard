@@ -96,7 +96,7 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
         </scene>
-        <!--Registration-->
+        <!--Add new movie-->
         <scene sceneID="TRJ-39-Ftd">
             <objects>
                 <viewController id="tRV-vf-os4" customClass="MovieFormViewController" customModule="MoviesLib" customModuleProvider="target" sceneMemberID="viewController">
@@ -177,7 +177,7 @@
                                             <constraint firstAttribute="height" constant="40" id="k2f-hK-Ti6"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Registry">
+                                        <buttonConfiguration key="configuration" style="plain" title="Save">
                                             <backgroundConfiguration key="background">
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                             </backgroundConfiguration>
@@ -198,7 +198,7 @@
                             <constraint firstItem="jrk-BW-MbQ" firstAttribute="leading" secondItem="r5N-ht-Y51" secondAttribute="leading" constant="16" id="iEn-f5-X4Q"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Registration" largeTitleDisplayMode="never" id="Ro2-lh-4d0"/>
+                    <navigationItem key="navigationItem" title="Add new movie" largeTitleDisplayMode="never" id="Ro2-lh-4d0"/>
                     <connections>
                         <outlet property="buttonAddEdit" destination="MJC-VV-WVY" id="LwL-LR-jkZ"/>
                         <outlet property="imageViewPoster" destination="CNJ-Wm-c7U" id="KS7-R0-u6u"/>
@@ -361,7 +361,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cCm-rZ-KqA"/>
+        <segue reference="hbg-r8-hn0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="camera.badge.ellipsis" catalog="system" width="128" height="92"/>

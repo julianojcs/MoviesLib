@@ -22,7 +22,7 @@ class MovieFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let movie = movie {
-            title = "Edit registry"
+            title = "Edit movie"
             textFieldTitle.text = movie.title
             textFieldRating.text = "\(movie.rating)"
             textFieldDuration.text = movie.duration
