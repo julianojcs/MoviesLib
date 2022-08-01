@@ -14,4 +14,8 @@ struct Movie: Codable {
     var rating: Double?
     var summary: String?
     var image: String?
+    
+    var imageSmall: String {
+        image != "" ? "\(image!)small" : ""
+    }
 }
